@@ -9,7 +9,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HomeController {
 
     @RequestMapping(value = "/",method = RequestMethod.GET)
+    @ResponseBody
     public String paginaPrincipal(){
+        return "hola :D";
+    }
+
+    @RequestMapping(value = {"/navbar"})
+    public String navbarView(){
         return "navbar";
     }
 }
